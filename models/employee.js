@@ -32,7 +32,7 @@ module.exports = function(sequelize, DataTypes) {
 
     Employee.associate = function(models) {
 
-        Employee.belongsToMany(models.Project, { through: EmployeesProjects });
+        Employee.belongsToMany(models.Project, { through: "ProjectsEmployees" });
 
     }
 

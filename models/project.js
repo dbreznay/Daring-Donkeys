@@ -1,4 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
+    console.log(sequelize.models);
     var Project = sequelize.define("Project", {
         name: {
             type: DataTypes.TEXT,
@@ -31,10 +32,12 @@ module.exports = function(sequelize, DataTypes) {
 
       Project.associate = function(models) {
 
-        Project.belongsToMany(models.Employee, { through: EmployeesProjects });
+        Project.belongsToMany(models.Employee, { through: "ProjectsEmployees" });
 
     }
 
+    
     return Project;
-
+    
+    
 };
