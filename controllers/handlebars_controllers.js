@@ -3,12 +3,33 @@ var router = express.Router();
 
 var employee = require("../models/employee");
 
-router.get("/", (req, res) => {
+var project = require("../models/project");
+
+var schedule = require("../models/schedule");
+
+router.get("/addemployee", (req, res) => {
     // console.log(req);
 
         res.render("employees");
     });
 
+router.get("/addproject", (req, res) => {
+     // console.log(req);
+    
+        res.render("projectForm");
+    });
+
+router.get("/schedule", (req, res) => {
+        // console.log(req);
+       
+        res.render("calendar");
+    });
+
+router.get("/directory", (req, res) => {
+       // console.log(req);
+       
+        res.render("employeeDirectory");
+    });
 
 // router.post("/api/burger", (req, res) => {
 //     burger.insertOne("burger_name", req.body.burger_name, result => {
