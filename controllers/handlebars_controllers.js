@@ -6,7 +6,7 @@ var employee = require("../models/employee");
 router.get("/", (req, res) => {
     // console.log(req);
 
-        res.render("employees", hbsObject);
+        res.render("employees");
     });
 
 
