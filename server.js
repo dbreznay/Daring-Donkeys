@@ -1,6 +1,6 @@
 // Requiring necessary npm packages
 const express = require("express");
-const session = require("express-session");
+
 
 
 // Setting up port and requiring models for syncing
@@ -21,7 +21,9 @@ app.set("view engine", "handlebars");
 
 
 // Requiring our routes
-//var routes = require("./controllers/burgers_controller.js");
+var routes = require("./controllers/handlebars_controllers");
+
+app.use(routes);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync({}).then(() => {
