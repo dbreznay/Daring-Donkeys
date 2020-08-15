@@ -1,4 +1,10 @@
-form.signup,
+form.signup {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
 form.login {
   margin-top: 50px;
 }
