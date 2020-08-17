@@ -1,10 +1,48 @@
-form.signup {
-  max-width: 300px;
-  margin: 10px auto;
-  padding: 10px 20px;
-  background: #f4f7f8;
-  border-radius: 8px;
+body {
+  margin: 0;
+  height: 100vh;
 }
-form.login {
-  margin-top: 50px;
+
+canvas {
+  display: block;
+}
+
+
+.welcome {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  font-family: 'Montserrat';
+  font-size: 4em;
+  width: auto;
+  line-height: .8em;
+  padding: .2em;
+}
+
+.description {
+  position: absolute;
+  font-family: 'Montserrat';
+  font-size: 4em;
+  top: 4em;
+  left: 3em;
+  padding: .2em;
+}
+
+.projForm {
+  position: absolute;
+  background-color: white;
+  width: 500px;
+  height: 550px;
+}
+
+.employForm {
+  position: absolute;
+  background-color: white;
+  width: 500px;
+  height: 300px;
+}
+
+.container-fluid {
+  position: absolute;
+  background-color: white;
 }
