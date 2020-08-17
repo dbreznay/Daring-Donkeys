@@ -1,11 +1,12 @@
 var express = require("express");
 var router = express.Router();
 
-var employee = require("../models/employee");
+var db = require("../models");
 
-var project = require("../models/project");
+router.get("/", (req, res) => {
 
-var schedule = require("../models/schedule");
+  res.render("index");
+});
 
 router.get("/addemployee", (req, res) => {
     // console.log(req);
@@ -31,24 +32,43 @@ router.get("/directory", (req, res) => {
         res.render("employeeDirectory");
     });
 
-// router.post("/api/burger", (req, res) => {
-//     burger.insertOne("burger_name", req.body.burger_name, result => {
-//         res.json({id: result.insertId});
-//     });
-// });
+router.post("/api/employee", function(req, res) {
+    console.log(req.body);
+    db.Employee.create({
+        name: req.body.name,
+        title: req.body.title,
+        email: req.body.email,
+        phone: req.body.phone
+    })
+      .then(function(dbEmployee) {
+        res.json(dbEmployee);
+      });
+});
 
-// router.put("/api/burger/:id", (req, res) => {
-//     //creates id = id
-//     var burgerId = req.params.id;
-  
-//     burger.updateOne(burgerId, result => {
-//       if (result.changedRows == 0) {
-//         // If no rows were changed, then the ID must not exist, so 404
-//         return res.status(404).end();
-//       } else {
-//         res.status(200).end();
-//       }
-//     });
-//   });
-// Export routes for server.js to use.
+router.get("/api/employees/:name", function(req, res) {
+    db.Employee.findOne({
+      where: {
+        name: req.params.name
+      }
+    })
+      .then(function(dbEmployee) {
+        res.json(dbEmployee);
+      });
+});
+
+
+
+router.post("/api/project", function(req, res) {
+    console.log(req.body);
+    db.Project.create({
+        name: req.body.name,
+        number: req.body.number,
+        client: req.body.client,
+    })
+      .then(function(dbProject) {
+        res.json(dbProject);
+      });
+});
+
+
 module.exports = router;
