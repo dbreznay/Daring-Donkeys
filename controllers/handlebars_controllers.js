@@ -8,11 +8,11 @@ router.get("/", (req, res) => {
   res.render("index");
 });
 
-router.get("/addemployee", (req, res) => {
+router.get("./addemployees", (req, res) => {
     // console.log(req);
-
         res.render("employees");
-    });
+}); 
+  
 
 router.get("/addproject", (req, res) => {
      // console.log(req);
@@ -27,7 +27,7 @@ router.get("/schedule", (req, res) => {
     });
 
 router.get("/directory", (req, res) => {
-       // console.log(req);
+        //console.log(req);
        
         res.render("employeeDirectory");
     });

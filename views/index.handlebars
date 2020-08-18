@@ -1,14 +1,18 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="active">
   <a class="navbar-brand" href="#">SiteLogic</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  </div>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-link" id="employForm">Add Employee<span class="sr-only"></span></a>
-      <a class="nav-link" id="projForm">Add Project</a>
-      <a class="nav-link" id="calendar">Schedule</a>
-      <a class="nav-link" id="directory">Employee Directory</a>
+      <div class="active"> 
+      <a href="/employees" class="nav-link" id="employForm">Add Employee<span class="sr-only"></span></a>
+      <a href="/projectForm" class="nav-link" id="projForm">Add Project</a>
+      <a href="/calendar" class="nav-link" id="calendar">Schedule</a>
+      <a href="/employeeDirectory" class="nav-link" id="directory">Employee Directory</a>
+      </div>
     </div>
   </div>
 </nav>
