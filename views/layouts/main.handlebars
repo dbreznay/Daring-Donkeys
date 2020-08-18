@@ -5,9 +5,9 @@
   <title>SiteLogic</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="stylesheets/project.css" rel="stylesheet">
@@ -16,124 +16,140 @@
   <link href="stylesheets/calender.css" rel="stylesheet">
 </head>
 
-	<body>
-		{{{ body }}}
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">SiteLogic</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a href="/addemployees" class="nav-link" id="employForm">Add Employee<span class="sr-only"></span></a>
+        <a href="/addproject" class="nav-link" id="projForm">Add Project</a>
+        <a href="/schedule" class="nav-link" id="calendar">Schedule</a>
+        <a href="/directory" class="nav-link" id="directory">Employee Directory</a>
+      </div>
+    </div>
+  </nav>
+  {{{ body }}}
 
-	  <script type="text/javascript" src="js/navbar.js"></script>
-    <script type="text/javascript" src="js/employees.js"></script>
-    <script type="text/javascript" src="js/calendar.js"></script>
-    <script type="text/javascript" src="js/projectform.js"></script>
-    <script type="text/javascript" src="js/directory.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <script type="text/javascript" src="js/navbar.js"></script>
+  <script type="text/javascript" src="js/employees.js"></script>
+  <script type="text/javascript" src="js/calendar.js"></script>
+  <script type="text/javascript" src="js/projectform.js"></script>
+  <script type="text/javascript" src="js/directory.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
-    <script>
+  <script>
 
-        var scene = new THREE.Scene();
+    var scene = new THREE.Scene();
 
-        var camera = new THREE.PerspectiveCamera(
-            75,
-            window.innerWidth/window.innerHeight,
-            0.1,
-            1000
-        )
+    var camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    )
 
-        camera.position.z = 5;
+    camera.position.z = 5;
 
-        var renderer = new THREE.WebGLRenderer({antialias: true});
+    var renderer = new THREE.WebGLRenderer({ antialias: true });
 
-        renderer.setClearColor("#e5e5e5");
+    renderer.setClearColor("#e5e5e5");
 
-        renderer.setSize(window.innerWidth,window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight);
 
-        document.body.appendChild(renderer.domElement);
+    document.body.appendChild(renderer.domElement);
 
-        window.addEventListener('resize', () => {
-            renderer.setSize(window.innerWidth,window.innerHeight);
-            camera.aspect = window.innerWidth/window.innerHeight;
+    window.addEventListener('resize', () => {
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth / window.innerHeight;
 
-            camera.updateProjectionMatrix();
-        })
+      camera.updateProjectionMatrix();
+    })
 
-        var raycaster = new THREE.Raycaster();
+    var raycaster = new THREE.Raycaster();
 
-        var mouse = new THREE.Vector2();
+    var mouse = new THREE.Vector2();
 
-        var geometry = new THREE.IcosahedronGeometry(1, 0);
+    var geometry = new THREE.IcosahedronGeometry(1, 0);
 
-        var material = new THREE.MeshLambertMaterial({color: 0x0033cc});
+    var material = new THREE.MeshLambertMaterial({ color: 0x0033cc });
 
-        var mesh = new THREE.Mesh(geometry, material);
+    var mesh = new THREE.Mesh(geometry, material);
 
-        mesh.position.x = 4;
-        mesh.position.y = 3;
-       
-        scene.add(mesh);
-     
-        var mesh2 = new THREE.Mesh(geometry, material);
-        mesh2.position.x = 0;
-        mesh2.position.y = 0;
-        
-        scene.add(mesh2);
+    mesh.position.x = 4;
+    mesh.position.y = 3;
 
-        var mesh3 = new THREE.Mesh(geometry, material);
-        mesh3.position.x = -3;
-        mesh3.position.y = -3;
-        
-        scene.add(mesh3);
+    scene.add(mesh);
 
-        var mesh4 = new THREE.Mesh(geometry, material);
-        mesh4.position.x = 5;
-        mesh4.position.y = -2;
-        
-        scene.add(mesh4);
+    var mesh2 = new THREE.Mesh(geometry, material);
+    mesh2.position.x = 0;
+    mesh2.position.y = 0;
 
-        var mesh5 = new THREE.Mesh(geometry, material);
-        mesh5.position.x = -6;
-        mesh5.position.y = 2.5;
-        
-        scene.add(mesh5);
-            
-        var light = new THREE.PointLight(0xFFFFFF, 1, 1000)
-        light.position.set(0,0,0);
-        scene.add(light);
+    scene.add(mesh2);
 
-        var light = new THREE.PointLight(0xFFFFFF, 2, 1000)
-        light.position.set(0,0,25);
-        scene.add(light);
+    var mesh3 = new THREE.Mesh(geometry, material);
+    mesh3.position.x = -3;
+    mesh3.position.y = -3;
 
-        var render = function() {
-            requestAnimationFrame(render);
+    scene.add(mesh3);
 
-            mesh.rotation.x += .0075;
-            mesh.rotation.y += .0075;
-            mesh.rotation.z += .0075;
+    var mesh4 = new THREE.Mesh(geometry, material);
+    mesh4.position.x = 5;
+    mesh4.position.y = -2;
 
-            mesh2.rotation.x += .0075;
-            mesh2.rotation.y += .0075;
-            mesh2.rotation.z += .0075;
+    scene.add(mesh4);
 
-            mesh3.rotation.x += .0075;
-            mesh3.rotation.y += .0075;
-            mesh3.rotation.z += .0075;
+    var mesh5 = new THREE.Mesh(geometry, material);
+    mesh5.position.x = -6;
+    mesh5.position.y = 2.5;
 
-            mesh4.rotation.x += .0075;
-            mesh4.rotation.y += .0075;
-            mesh4.rotation.z += .0075;
+    scene.add(mesh5);
 
-            mesh5.rotation.x += .0075;
-            mesh5.rotation.y += .0075;
-            mesh5.rotation.z += .0075;
-            
-            renderer.render(scene, camera);
-        }
+    var light = new THREE.PointLight(0xFFFFFF, 1, 1000)
+    light.position.set(0, 0, 0);
+    scene.add(light);
 
-        
-        render();
+    var light = new THREE.PointLight(0xFFFFFF, 2, 1000)
+    light.position.set(0, 0, 25);
+    scene.add(light);
 
-        
-        
-        
-    </script>
-	</body>
+    var render = function () {
+      requestAnimationFrame(render);
+
+      mesh.rotation.x += .0075;
+      mesh.rotation.y += .0075;
+      mesh.rotation.z += .0075;
+
+      mesh2.rotation.x += .0075;
+      mesh2.rotation.y += .0075;
+      mesh2.rotation.z += .0075;
+
+      mesh3.rotation.x += .0075;
+      mesh3.rotation.y += .0075;
+      mesh3.rotation.z += .0075;
+
+      mesh4.rotation.x += .0075;
+      mesh4.rotation.y += .0075;
+      mesh4.rotation.z += .0075;
+
+      mesh5.rotation.x += .0075;
+      mesh5.rotation.y += .0075;
+      mesh5.rotation.z += .0075;
+
+      renderer.render(scene, camera);
+    }
+
+
+    render();
+
+
+
+
+  </script>
+</body>
+
 </html>

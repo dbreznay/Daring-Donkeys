@@ -9,9 +9,8 @@ canvas {
 
 
 .welcome {
-  position: absolute;
-  top: 2em;
-  left: 2em;
+
+  
   font-family: 'Montserrat';
   font-size: 4em;
   width: auto;
@@ -20,7 +19,7 @@ canvas {
 }
 
 .description {
-  position: absolute;
+ 
   font-family: 'Montserrat';
   font-size: 4em;
   top: 4em;
@@ -63,5 +62,11 @@ canvas {
 .calendar {
   position: absolute;
   background-color: white;
+}
+
+.introduction {
+  position: absolute;
+  margin-top: 2em;
+  margin-left: 2em;
 }
 

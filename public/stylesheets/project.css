@@ -1,7 +1,4 @@
-.container {
-    border-style: double;
-    border-color: red;
-}
+
 
 h3 {
     color: blue;
@@ -15,6 +12,8 @@ h3 {
 }
 
 #project-form {
+    border-style: solid;
+    border-color:blue;
     margin-left: 32em;
     margin-top: 4em;
 }
