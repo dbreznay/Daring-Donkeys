@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
   res.render("index");
 });
 
-router.get("./addemployees", (req, res) => {
+router.get("/addemployees", (req, res) => {
     // console.log(req);
         res.render("employees");
 }); 
@@ -45,7 +45,7 @@ router.post("/api/employee", function(req, res) {
       });
 });
 
-router.get("/api/employees/:name", function(req, res) {
+router.get("/api/employees/name/:name", function(req, res) {
     db.Employee.findOne({
       where: {
         name: req.params.name
@@ -64,6 +64,8 @@ router.post("/api/project", function(req, res) {
         name: req.body.name,
         number: req.body.number,
         client: req.body.client,
+        start: req.body.start,
+        end: req.body.end
     })
       .then(function(dbProject) {
         res.json(dbProject);

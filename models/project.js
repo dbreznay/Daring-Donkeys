@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
-                len: [7],
+                len: [5],
                 isNumeric: true
             }
         },
@@ -20,22 +20,28 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.TEXT,
             allowNull: false
         },
-        tasks: {
-            type: DataTypes.TEXT,
-            allowNull: false
-        },
-        status: {
+        start: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                isDate: true
+            }
+        },
+        end: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isDate: true
+            }
         }
-      });
 
-      Project.associate = function(models) {
+    });
+
+    Project.associate = function(models) {
 
         Project.belongsToMany(models.Employee, { through: "ProjectsEmployees" });
 
     }
-
     
     return Project;
     
