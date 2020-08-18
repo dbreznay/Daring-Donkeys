@@ -1,0 +1,14 @@
+.container {
+    border-style: solid;
+    border-color: blue;
+}
+
+h3 {
+    color:darkblue;
+    text-align: center;
+}
+
+.form-control {
+    border-style: outset;
+    border-color: black;
+}
