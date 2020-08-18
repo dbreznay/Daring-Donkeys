@@ -28,14 +28,23 @@ canvas {
   padding: .2em;
 }
 
-.projForm {
+#project-form {
   position: absolute;
   background-color: white;
   width: 500px;
-  height: 550px;
+  height: fit-content;
 }
 
-.employForm {
+#employee-form {
+  position: absolute;
+  background-color: white;
+  width: 500px;
+  height: fit-content;
+  margin-left: 32em;
+  margin-top: 4em;
+}
+
+#directory-form {
   position: absolute;
   background-color: white;
   width: 500px;
@@ -46,3 +55,13 @@ canvas {
   position: absolute;
   background-color: white;
 }
+
+.directorySubmit {
+  margin-right: 50px;  
+}
+
+.calendar {
+  position: absolute;
+  background-color: white;
+}
+
