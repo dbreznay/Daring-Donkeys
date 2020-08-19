@@ -3,7 +3,7 @@ $(document).ready(function() {
     var searchName = $("#name-search");
     var employee;
     var space = $(".space");
-    var searchResult = $(".employResults");
+    
 
     $(document).on("submit", "#directory-form", searchForEmployee);
 
@@ -34,6 +34,7 @@ $(document).ready(function() {
         console.log(data);
         var resultsContainer = $("<div>");
         resultsContainer.addClass("container");
+        resultsContainer.addClass("form");
         resultsContainer.addClass("employResults");
 
 

@@ -8,18 +8,6 @@ module.exports = function(sequelize, DataTypes) {
                 len: [1]
             }
         },
-        number: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                len: [5],
-                isNumeric: true
-            }
-        },
-        client: {
-            type: DataTypes.TEXT,
-            allowNull: false
-        },
         start: {
             type: DataTypes.STRING,
             allowNull: false,

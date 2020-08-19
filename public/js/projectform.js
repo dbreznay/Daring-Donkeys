@@ -11,21 +11,10 @@ var end = $("#end-date");
     function handleProjectFormSubmit(event) {
         event.preventDefault();
 
-        if (!projInput.val().trim().trim() || !clientInput.val().trim().trim() || !projNum.val().trim().trim()) {
-            return;
-        }
+     
 
         insertProject({
             name: projInput
-                .val()
-                .trim()
-            ,
-                        
-            number: projNum
-                .val()
-                .trim()
-            ,
-            client: clientInput
                 .val()
                 .trim()
             ,
@@ -38,12 +27,13 @@ var end = $("#end-date");
                 .trim()
         });
 
-    function insertProject(projectData) {
-        $.post("/api/project", projectData)
-          .then(function() {
+        function insertProject(projectData) {
+            console.log(projectData)
+            $.post("/api/project", projectData)
+            .then(function() {
               console.log("Project Added!");
-          });
-    }
+            });
+        }
 
 
 
