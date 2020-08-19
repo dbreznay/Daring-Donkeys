@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
         phone: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [10],

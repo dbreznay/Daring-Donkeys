@@ -104,6 +104,11 @@
   padding: .2em;
 }
 
+.viewer {
+  position: absolute;
+
+}
+
 body {
   margin: 0;
   height: 100vh;
