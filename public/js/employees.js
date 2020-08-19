@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-	var emNameInput = $("#em-name");
-    var titleInput = $("#em-title");
-    var email = $("#em-email");
-	var phone = $("#em-phone");
+var emNameInput = $("#em-name");
+var titleInput = $("#em-title");
+var email = $("#em-email");
+var phone = $("#em-phone");
 	
 	$(document).on("submit", "#employee-form", handleEmployeeFormSubmit);
 
