@@ -36,13 +36,6 @@
   margin-left: 120px;
 }
 
-.container-fluid {
-  position: absolute;
-  background-color: white;
-  border-style: dashed;
-  border-color: crimson;
-}
-
 .description {
   font-family: 'Montserrat';
   font-size: 4em;
@@ -82,7 +75,7 @@
 .introduction {
   position: absolute;
   margin-top: 2em;
-  margin-left: 2em;
+  margin-left: 105px;
 }
 
 .stat {
@@ -115,8 +108,16 @@ td {
 
 .viewer {
   position: absolute;
-  margin-left: 175px;
+  background-color: white;
+  border-style: solid;
+  border-color: blue;
+}
 
+.tools {
+  margin-bottom: 20px;
+  padding: 50px;
+  height: 150px;
+  background-color: #0072bb;
 }
 
 body {
@@ -142,5 +143,11 @@ h3 {
   color: blue;
   font-style: italic;
   padding-top: 10px;
+  text-align: center;
+}
+
+p {
+  font-size: x-large;
+  font-weight: 800;
   text-align: center;
 }
