@@ -2,7 +2,7 @@ $(document).ready(function(){
     
     $(document).on("click", "#find-tasks", searchForTasks);
 
-    var emptyField = $("#task-table");
+    var taskTable = $("#task-table");
 
     function searchForTasks(event) {
         event.preventDefault();
@@ -17,13 +17,13 @@ $(document).ready(function(){
 
     function showProjResults() {
         console.log(projects);
-        emptyField.children().not(":first").remove();
+        taskTable.children().not(":first").remove();
         var showProjects = [];
         for (var i = 0; i < projects.length; i++) {
             showProjects.push(createProjectRows(projects[i]));
         }
         
-        emptyField.append(showProjects);
+        taskTable.append(showProjects);
     }
 
     function createProjectRows(data) {
@@ -33,6 +33,7 @@ $(document).ready(function(){
         projTr.append("<td>" + data.name + "</td>");
         projTr.append("<td>" + data.start + "</td>");
         projTr.append("<td>" + data.start + "</td>");
+        projTr.append("<td>" + data.Employees[0].name + "</td>");
         return projTr;
 
     }
