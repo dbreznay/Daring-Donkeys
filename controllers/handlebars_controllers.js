@@ -76,7 +76,9 @@ router.post("/api/project", async function (req, res) {
 
 router.get("/api/project", function (req, res) {
   console.log(req.body);
-  db.Project.findAll({})
+  db.Project.findAll({
+    include: [db.Employee]
+  })
     .then(function (dbProject) {
       res.json(dbProject);
     });

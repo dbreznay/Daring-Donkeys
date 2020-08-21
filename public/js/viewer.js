@@ -33,6 +33,7 @@ $(document).ready(function(){
         projTr.append("<td>" + data.name + "</td>");
         projTr.append("<td>" + data.start + "</td>");
         projTr.append("<td>" + data.start + "</td>");
+        projTr.append("<td>" + data.Employees[0].name + "</td>");
         return projTr;
 
     }
