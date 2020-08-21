@@ -89,6 +89,15 @@
   margin-left: 60px;
 }
 
+th {
+  background-color: blue;
+  color: white;
+}
+
+td {
+  background-color: lightgrey;
+}
+
 .welcome {  
   font-family: 'Montserrat';
   font-size: 4em;
