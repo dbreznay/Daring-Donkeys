@@ -33,44 +33,29 @@ $(document).ready(function() {
     function createEmployeeInfo(data) {
         console.log(data);
         var resultsContainer = $("<div>");
-        resultsContainer.addClass("container");
-        resultsContainer.addClass("form");
-        resultsContainer.addClass("employResults");
+       
 
 
-        var nameRow = $("<div>");
-        nameRow.addClass("row");
-        nameRow.addClass("stat");
-        nameRow.addClass("name");
+       
         var nameHeader = $("<h3>");
         nameHeader.text("Name: " + data.name);
-        nameRow.append(nameHeader);
-        resultsContainer.append(nameRow);
+        resultsContainer.append(nameHeader);
 
-        var titleRow = $("<div>");
-        titleRow.addClass("row");
-        titleRow.addClass("stat");
+        
         var titleHeader = $("<h3>");
         titleHeader.text("Title: " + data.title);
-        titleRow.append(titleHeader);
-        resultsContainer.append(titleRow);
+        resultsContainer.append(titleHeader);
 
-        var emailRow = $("<div>");
-        emailRow.addClass("row");
-        emailRow.addClass("stat");
+        
         var emailHeader = $("<h3>");
         emailHeader.text("Email: " + data.email);
-        emailRow.append(emailHeader);
-        resultsContainer.append(emailRow);
+        resultsContainer.append(emailHeader);
 
 
-        var phoneRow = $("<div>");
-        phoneRow.addClass("row");
-        phoneRow.addClass("stat");
+        
         var phoneHeader = $("<h3>");
         phoneHeader.text("Phone: " + data.phone);
-        phoneRow.append(phoneHeader);
-        resultsContainer.append(phoneRow);
+        resultsContainer.append(phoneHeader);
         
         return resultsContainer;
 
