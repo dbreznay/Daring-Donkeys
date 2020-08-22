@@ -9,7 +9,7 @@
 
   ### App Screen Shots
 
-  ![Photo]()   
+  ![Photo](https://user-images.githubusercontent.com/60904436/90945736-566d1d80-e3ec-11ea-9aee-16ff905cd03e.png) 
   
 
   ### License
@@ -26,8 +26,3 @@
   * Muendem (Stephen) Fonkeng
   * Kyle Knudtson
   * Jared Varnum
-
-
-  ### Questions
-
-   Email me at dylanbrezny@gamil.com
