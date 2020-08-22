@@ -8,7 +8,7 @@
   
   ### App Screen Shots
 
-  ![Photo] (https://user-images.githubusercontent.com/60904436/90958432-278d9080-e45a-11ea-8577-1baa9d9c33fb.png)
+  ![Photo](https://user-images.githubusercontent.com/60904436/90958432-278d9080-e45a-11ea-8577-1baa9d9c33fb.png)
   ## Deployed Version
 
   [Live Version](https://glacial-reef-34949.herokuapp.com/)
