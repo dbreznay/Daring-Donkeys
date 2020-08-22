@@ -16,7 +16,7 @@ $(document).ready(function(){
     }
 
     function showProjResults() {
-        console.log(projects);
+        console.log("Hello", projects);
         taskTable.children().not(":first").remove();
         var showProjects = [];
         for (var i = 0; i < projects.length; i++) {
@@ -27,7 +27,7 @@ $(document).ready(function(){
     }
 
     function createProjectRows(data) {
-        console.log(data);
+        console.log("Hi!", data);
         var projTr = $("<tr>");
         projTr.data("id", data.id);
         projTr.append("<td>" + data.name + "</td>");
