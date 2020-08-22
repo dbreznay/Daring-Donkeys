@@ -1,37 +1,39 @@
-
-<form id="project-form" class="container">
-  <div class="projForm">
+<form id="project-form" class="card">
+  <div class=" container projForm">
    
-        <div class="col-md-6 col-md-offset-3">
-            <h3>Project:</h3>
+        <div class="form-group">
+            <h3 class="display-6 text-center">Project:</h3>
             <input class="form-control" id="proj-name" type="text" placeholder="Project">
         </div>
+          
+        <div class="form-group">
+          <h3 class="display-6 text-center" for="exampleFormControlSelect1">Assign Employee:</h3>
+           <select class="form-control" id="exampleFormControlSelect1">
 
-        <div class="col-md-6 col-md-offset-3">
-            <h3>Start Date:</h3>
+            {{#each employees}}
+
+            <option value="{{ id }}">{{ name }}</option>
+
+            {{/each}}
+
+          </select>
+       </div>
+
+        <div class="form-group">
+            <h3 class="display-6 text-center">Start Date:</h3>
             <input class="form-control" id="start-date" type="text" placeholder="Ex: 08/17/20">
         </div>
 
-        <div class="col-md-6 col-md-offset-3">
-            <h3>End Date:</h3>
+        <div class="form-group">
+            <h3 class="display-6 text-center">End Date:</h3>
             <input class="form-control" id="end-date" type="text" placeholder="Ex: 10/22/20">
         </div>
         
         <div class="form-group">
-				<label for="category">Assign Employee:</label>
-					<select class="custom-select" id="employee-names">
-                        {{#each employees}}
-                            <option value="{{ id }}">{{ name }}</option>
-                        {{/each}}
-                    </select>
-		</div>
-
-
-
-        <div class="col-md-6 col-md-offset-3">
             <div class="submitBtn">
                 <input class="btn btn-primary" type="submit" value="Submit">
             </div>
         </div>
   </div>
 </form>
+    
