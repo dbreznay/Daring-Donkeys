@@ -59,3 +59,7 @@
   right: 0;
   text-align: center;
 }
+
+ul.horiztonal-list li {
+  display:inline;
+}
