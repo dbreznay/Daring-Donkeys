@@ -1,5 +1,5 @@
 <form id="project-form" class="card">
-  <div class=" container projForm">
+  <div class="container projForm">
    
         <div class="form-group">
             <h3 class="display-6 text-center">Project:</h3>
@@ -8,11 +8,11 @@
           
         <div class="form-group">
           <h3 class="display-6 text-center" for="exampleFormControlSelect1">Assign Employee:</h3>
-           <select class="form-control" id="exampleFormControlSelect1">
+           <select class="form-control employee-names" id="exampleFormControlSelect1">
 
             {{#each employees}}
 
-            <option value="{{ id }}">{{ name }}</option>
+              <option value="{{ id }}">{{ name }}</option>
 
             {{/each}}
 

@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     var projInput = $("#proj-name");
-    var employeeSelect = $("#employee-names");
+    var employeeSelect = $(".employee-names");
     var start = $("#start-date");
     var end = $("#end-date");
     
